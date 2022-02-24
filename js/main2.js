@@ -330,9 +330,9 @@
           
             
           slidesContainer.pointerover = function( mouseData ){
-             mouseX = mouseData.data.global.x;
-            mouseY = mouseData.data.global.y;         
-            TweenMax.to( displacementFilter.scale, 1, { x: "+=" + Math.sin( mouseX ) * 1200 + "", y: "+=" + Math.cos( mouseY ) * 200 + ""  });   
+            mouseX = mouseData.data.global.x;
+            mouseY = mouseData.data.global.y;   
+            TweenMax.to( displacementFilter.scale, 1, { x: "+=" + Math.sin( mouseX ) * 100 + "", y: "+=" + Math.cos( mouseY ) * 100 + ""  });   
             rotateSpite();
           };      
 
@@ -343,42 +343,42 @@
           
         }
       
-      //   // CLICK
-      //   if ( options.interactionEvent === 'click' || options.interactionEvent === 'both'  ) {
+        // CLICK
+        if ( options.interactionEvent === 'click' || options.interactionEvent === 'both'  ) {
             
-      //     slidesContainer.pointerup = function( mouseData ){
-      //       if ( options.dispatchPointerOver === true ) {
-      //         TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0, onComplete: function() {
-      //           TweenMax.to( displacementFilter.scale, 1, { x: 20, y: 20  });        
-      //         } });            
-      //       } else {
-      //         TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0 });                      
-      //         cancelAnimationFrame( rafID );
-      //       }
+          slidesContainer.pointerup = function( mouseData ){
+            if ( options.dispatchPointerOver === true ) {
+              TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0, onComplete: function() {
+                TweenMax.to( displacementFilter.scale, 1, { x: 20, y: 20  });        
+              } });            
+            } else {
+              TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0 });                      
+              cancelAnimationFrame( rafID );
+            }
 
-      //     };     
+          };     
 
-      //     slidesContainer.pointerdown = function( mouseData ){
-      //       mouseX = mouseData.data.global.x;
-      //       mouseY = mouseData.data.global.y;         
-      //       TweenMax.to( displacementFilter.scale, 1, { x: "+=" + Math.sin( mouseX ) * 1200 + "", y: "+=" + Math.cos( mouseY ) * 200 + ""  });   
-      //     };    
+          slidesContainer.pointerdown = function( mouseData ){
+            mouseX = mouseData.data.global.x;
+            mouseY = mouseData.data.global.y;         
+            TweenMax.to( displacementFilter.scale, 1, { x: "+=" + Math.sin( mouseX ) * 1200 + "", y: "+=" + Math.cos( mouseY ) * 200 + ""  });   
+          };    
            
-      //     slidesContainer.pointerout = function( mouseData ){
-      //       if ( options.dispatchPointerOver === true ) {
-      //         TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0, onComplete: function() {
-      //           TweenMax.to( displacementFilter.scale, 1, { x: 20, y: 20  });        
-      //         } });            
-      //       } else {
-      //         TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0 });                      
-      //         cancelAnimationFrame( rafID );
-      //       }
+          slidesContainer.pointerout = function( mouseData ){
+            if ( options.dispatchPointerOver === true ) {
+              TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0, onComplete: function() {
+                TweenMax.to( displacementFilter.scale, 1, { x: 20, y: 20  });        
+              } });            
+            } else {
+              TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0 });                      
+              cancelAnimationFrame( rafID );
+            }
 
-      //     };              
+          };              
 
-      //   }
+        }
       
-      // }
+      }
       
       
       
